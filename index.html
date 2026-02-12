@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximilian Andres</title>
+</head>
+<style type="text/css">
+    html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    html {
+        font-family: -apple-system, BlinkMacSystemFont, arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background: #fafafa;
+        position: relative;
+    }
+    
+    /* Bird Animation */
+    .bird-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+    }
+    
+    .bird {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        animation: fly linear infinite;
+    }
+    
+    .bird svg {
+        width: 100%;
+        height: 100%;
+        fill: #999;
+        opacity: 0.3;
+    }
+    
+    @keyframes fly {
+        0% {
+            left: -50px;
+        }
+        100% {
+            left: calc(100% + 50px);
+        }
+    }
+    
+    .bird:nth-child(1) { top: 10%; animation-duration: 25s; animation-delay: 0s; }
+    .bird:nth-child(2) { top: 20%; animation-duration: 30s; animation-delay: 3s; }
+    .bird:nth-child(3) { top: 35%; animation-duration: 28s; animation-delay: 6s; }
+    .bird:nth-child(4) { top: 50%; animation-duration: 32s; animation-delay: 2s; }
+    .bird:nth-child(5) { top: 65%; animation-duration: 27s; animation-delay: 8s; }
+    .bird:nth-child(6) { top: 75%; animation-duration: 29s; animation-delay: 4s; }
+    .bird:nth-child(7) { top: 15%; animation-duration: 26s; animation-delay: 10s; }
+    .bird:nth-child(8) { top: 85%; animation-duration: 31s; animation-delay: 5s; }
+    
+    /* Content styling */
+    .content-wrapper {
+        position: relative;
+        z-index: 1;
+        background: transparent;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: 0 auto;
+        gap: 2em;
+        width: 100%;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .column.right {
+        padding: 0 10px;
+    }
+    
+    .column.right p {
+        line-height: 1.5rem;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 10px 10px 50px 10px;
+        font-size: 1.05rem;
+        line-height: 1.4rem;
+    }
+    
+    @media screen and (min-width: 800px) {
+        .row {
+            padding-top: 3rem;
+        }
+        .column.left {
+            flex: 2;
+        }
+        .column.right {
+            flex: 1;
+        }
+        .container {
+            margin: 1.2rem auto 0 auto;
+        }
+    }
+    
+    h1, h2, h3 {
+        font-weight: 600;
+    }
+    
+    h2, h3 {
+        font-weight: 500;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        margin-top: 3rem;
+    }
+    
+    .intro {
+        max-width: 500px;
+    }
+    
+    div.picture-container {
+        width: 100%;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    a {
+        color: #0000EE;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    p.title {
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    
+    p.desc {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    p.links {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: .95rem;
+    }
+    
+    div.links-list p {
+        margin: .3rem auto;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    span.date {
+        font-family: monospace;
+        font-size: .8rem;
+        position: relative;
+        bottom: 1px;
+        margin-right: 1rem;
+        color: #555;
+    }
+</style>
+<body>
+    <!-- Flying birds background -->
+    <div class="bird-container">
+        <div class="bird">
+            <svg viewBox="0 0 100 100">
+                <path d="M50,50 Q30,30 10,50 Q30,40 50,50 Q70,40 90,50 Q70,30 50,50" />
+            </svg>
+        </div>
+        <div class="bird">
+            <svg viewBox="0 0 100 100">
+                <path d="M50,50 Q30,30 10,50 Q30,40 50,50 Q70,40 90,50 Q70,30 50,50" />
+            </svg>
+        </div>
+        <div class="bird">
+            <svg viewBox="0 0 100 100">
+                <path d="M50,50 Q30,30 10,50 Q30,40 50,50 Q70,40 90,50 Q70,30 50,50" />
+            </svg>
+        </div>
+        <div class="bird">
+            <svg viewBox="0 0 100 100">
+                <path d="M50,50 Q30,30 10,50 Q30,40 50,50 Q70,40 90,50 Q70,30 50,50" />
+            </svg>
+        </div>
+        <div class="bird">
+            <svg viewBox="0 0 100 100">
+                <path d="M50,50 Q30,30 10,50 Q30,40 50,50 Q70,40 90,50 Q70,30 50,50" />
+            </svg>
+        </div>
+        <div class="bird">
+            <svg viewBox="0 0 100 100">
+                <path d="M50,50 Q30,30 10,50 Q30,40 50,50 Q70,40 90,50 Q70,30 50,50" />
+            </svg>
+        </div>
+        <div class="bird">
+            <svg viewBox="0 0 100 100">
+                <path d="M50,50 Q30,30 10,50 Q30,40 50,50 Q70,40 90,50 Q70,30 50,50" />
+            </svg>
+        </div>
+        <div class="bird">
+            <svg viewBox="0 0 100 100">
+                <path d="M50,50 Q30,30 10,50 Q30,40 50,50 Q70,40 90,50 Q70,30 50,50" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="column left">
+                <div class="picture-container">
+                    <picture>
+                        <source srcset="https://sahilchinoy-photos.s3.amazonaws.com/balboa-1280.webp 1280w, https://sahilchinoy-photos.s3.amazonaws.com/balboa-640.webp 640w" type="image/webp">
+                        <source srcset="https://sahilchinoy-photos.s3.amazonaws.com/balboa-1280.jpg 1280w, https://sahilchinoy-photos.s3.amazonaws.com/balboa-640.jpg 640w">
+                        <img src="https://github.com/maxgoes22/website/Me.jpg" alt="Profile">
+                    </picture>
+                </div>
+            </div>
+            <div class="column right">
+                <h1>Maximilian Andres</h1>
+                <p>Tenure-Track Researcher<br>
+                Department of Business Studies and Economics<br>
+                University of Bremen</p>
+
+                <p>maximilian.andres(at)uni-bremen.de<br>
+                    <a href="https://github.com/maxgoes22/website/CV.pdf">CV available here</a>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="intro">
+                <p>Hello, World! I am a Tenure-Track Researcher in Institutional Economics at the University of Bremen.</p>
+
+                <p>My research focuses on the effects of institutions on cooperation in social dilemma with primary applications to oligopolies.</p>
+
+                <p>In 2023, I was awarded the Heinz-Sauermann Prize of the German Association for Experimental Economic Research for the best Ph.D. thesis between 2022 and 2023.</p>
+            </div>
+
+            <h2>Working Papers</h2>
+
+                <p class="title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4994196" target="_blank" rel="noopener noreferrer">Payoffs, Beliefs, and Cooperation in Infinitely Repeated Games</a></p>
+                <p class="desc">with Lisa Bruttel, and Juri Nithammer</p>
+
+                <p class="title"><a href="https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/68013/file/cepa88.pdf" target="_blank" rel="noopener noreferrer">Communication and Collusion in Oligopoly Experiments: A Meta-Study using Machine Learning</a></p>
+                <p class="desc">with Lisa Bruttel</p>
+
+                <p class="title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4836117" target="_blank" rel="noopener noreferrer">Destructive Communication</a></p>
+                <p class="desc">with Vasilisa Werner</p>
+
+            <h2>Publications</h2>
+
+                <p class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0014292122002112" target="_blank" rel="noopener noreferrer">How Communication makes the Difference between a Cartel and Tacit Collusion: A Machine Learning Approach</a></p>
+                <p class="desc">with Lisa Bruttel, and Jana Friedrichsen<br><i>European Economic Review 152 (2023): 104331</i></p>
+
+                <p class="title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167718721000217" target="_blank" rel="noopener noreferrer">The Leniency Rule Revisited: Experiments on Cartel Formation with Open Communication</a></p>
+                <p class="desc">with Lisa Bruttel, and Jana Friedrichsen<br><i>International Journal of Industrial Organization 76 (2021): 102728</i></p>
+
+            <h2>Teaching</h2>
+
+                <p class="title">Public Policy for Social Dilemmas</p>
+                <p class="desc">Postgraduate-Level</p>
+
+                <p class="title">Applied Econometrics</p>
+                <p class="desc">Post- and Undergraduate-Level</p>
+
+        </div>
+    </div>
+</body>
+</html>
